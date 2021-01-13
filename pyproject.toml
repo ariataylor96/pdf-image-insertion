@@ -1,0 +1,26 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "pdf-image-adding"
+version = "0.1.0"
+description = ""
+authors = [ "Mark Rawls <markrawls96@gmail.com>",]
+
+[tool.black]
+line-length = 95
+target-version = [ "py37",]
+
+[tool.poetry.scripts]
+pi = 'pdf_image_adding.cli:cli'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pdfrw = "^0.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^20.8b1"
+flake8-black = "^0.2.1"
+flake8 = "^3.8.4"
