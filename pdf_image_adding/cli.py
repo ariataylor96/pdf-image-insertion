@@ -25,10 +25,10 @@ def cli():
     parser.add_argument("pdf_file_name")
     parser.add_argument("img_file_name")
 
-    parser.add_argument("-x", type=int, default=0)
-    parser.add_argument("-y", type=int, default=0)
-    parser.add_argument("-o", default="out.pdf")
-    parser.add_argument("-p", "--page", type=int, default=0)
+    parser.add_argument("-x", type=int, default=0, help="top left X coordinate")
+    parser.add_argument("-y", type=int, default=0, help="top left Y coordinate")
+    parser.add_argument("-o", default="out.pdf", help="output file name")
+    parser.add_argument("-p", "--page", type=int, default=0, help="zero-indexed page number")
 
     args = parser.parse_args()
 
